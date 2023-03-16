@@ -1,6 +1,6 @@
 import React from 'react';
-import RecipeSearch from './Components/RecipeSearch';
-import SavedRecipes from './Components/savedRecipes';
+import RecipeSearch from './components/RecipeSearch';
+import SavedRecipes from './components/savedRecipes';
 
 const App = () => {
   return (
