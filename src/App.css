@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-top: 7rem;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
