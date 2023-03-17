@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { saveRecipe } from './storage';
 
 
 
@@ -31,7 +32,7 @@ const RecipeSearch = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <section className='grid grid-cols-3 gap-4'>
       {/* Display a form for entering search query and health requirement */}
       <form onSubmit={handleSubmit}>
         <label>
@@ -61,19 +62,18 @@ const RecipeSearch = () => {
               <h3>{recipe.title}</h3>
               <img src={recipe.image} alt={recipe.title} />
               <ul>
-      {recipe.ingredients.map((ingredient, index) => (
-        <li key={index}>{ingredient}</li>
-      ))}
-    </ul>
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
               <p>Cooking time: {recipe.time} minutes</p>
               <a href={recipe.url} target="_blank" rel="noopener noreferrer">Go to the recipe!</a>
+              <button className="save-button" onClick={() => saveRecipe(recipe)}>Save</button>
             </div>
           ))}
         </div>
       )}
-
-      
-    </div>
+    </section>
   );
 };
 
