@@ -4,7 +4,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import SavedRecipes from './savedRecipes';
 import { RiStarSmileFill } from 'react-icons/ri';
 
-export default function Example() {
+export default function SideBar() {
     const [open, setOpen] = useState(false)
     const [isHovered, setIsHovered] = useState(false);
 
@@ -20,8 +20,7 @@ export default function Example() {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <RiStarSmileFill
-                        className={`w-10 h-10 transition-colors ${isHovered ? 'text-yellow-300' : 'text-yellow-500'
-                            }`}
+                        className={`w-10 h-10 transition-colors ${isHovered ? 'text-yellow-300' : 'text-yellow-500'}`}
                     />
                 </button>
             </div>
