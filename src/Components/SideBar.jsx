@@ -3,6 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import SavedRecipes from './savedRecipes';
 import { RiStarSmileFill } from 'react-icons/ri';
+import '../../src/App.css'
 
 export default function SideBar() {
     const [open, setOpen] = useState(false)
@@ -20,7 +21,7 @@ export default function SideBar() {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <RiStarSmileFill
-                        className={`w-10 h-10 transition-colors ${isHovered ? 'text-yellow-300' : 'text-yellow-500'}`}
+                        className={`w-10 h-10 transition-colors ${isHovered ? 'text-yellow-300 icon-spin' : 'text-yellow-500'} `}
                     />
                 </button>
             </div>
@@ -76,7 +77,7 @@ export default function SideBar() {
                                         {/* style={{ backgroundColor: "#147866" }} */}
                                         <div className="flex h-full flex-col overflow-y-scroll py-6 shadow-xl rounded-2xl bg-gradient-to-b from-green-900 to-green-800 ">
                                             <div className="px-6 sm:px-6">
-                                                <Dialog.Title className="text-2xl text-center font-semibold leading-6 text-gray-200">
+                                                <Dialog.Title className="text-2xl text-center font-semibold leading-6 text-gray-200 text-shadow">
                                                     Saved Recipes
                                                 </Dialog.Title>
                                             </div>
