@@ -26,13 +26,13 @@ const RecipeSearch = () => {
       time: hit.recipe.totalTime,
       url: hit.recipe.url,
     }));
-
+    console.log(data)
     // Update the recipes state variable with the extracted recipe data
     setRecipes(recipesData);
   };
 
   return (
-    <section className='grid grid-cols-3 gap-4'>
+    <section   className='grid grid-rows-2 grid-cols-2 gap-4'>
       {/* Display a form for entering search query and health requirement */}
       <form onSubmit={handleSubmit}>
         <label>

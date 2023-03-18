@@ -9,7 +9,6 @@ const saveRecipe = (recipe) => {
   savedRecipes.push(recipe);
   localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
   alert("Recipe saved!");
-  console.log(JSON.parse(localStorage.getItem("savedRecipes")));
 };
 
 const getSavedRecipes = () => {
@@ -27,4 +26,3 @@ export function deleteRecipe(url) {
 
 export { getSavedRecipes, saveRecipe };
 
-  
