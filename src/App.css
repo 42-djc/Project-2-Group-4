@@ -59,3 +59,37 @@ section {
     transform: rotate(360deg);
   }
 }
+
+@keyframes icon-spin {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+.icon-spin {
+  animation: icon-spin 3s linear infinite;
+}
+
+
+@keyframes button-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.hover-pulse:hover {
+  animation: button-pulse 2s infinite;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

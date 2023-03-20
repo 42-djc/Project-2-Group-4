@@ -3,7 +3,7 @@ import '../src/App.css'
 import Nav from './components/nav/Nav';
 import HeroSection from './components/HeroSection';
 import RecipeSearch from './components/RecipeSearch';
-import SavedRecipes from './components/savedRecipes';
+import SideBar from './components/SideBar'
 
 const App = () => {
   return (
@@ -11,11 +11,12 @@ const App = () => {
       <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
       <Nav/>
       <HeroSection />
+      <div className="fixed top-50 right-0">
+        <SideBar />
+      </div>
       <section>
-      <RecipeSearch />
-      <SavedRecipes/>
+        <RecipeSearch />
       </section>
-
     </body>
   );
 };

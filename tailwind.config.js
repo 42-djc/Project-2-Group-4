@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'logo-green': '#147866',
+      },
+      gradientColorStops: {
+        'logo-green': '#147866',
+      },
+    },
   },
   plugins: [],
 }
