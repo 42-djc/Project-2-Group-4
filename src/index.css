@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.recipe-card {
+  border: 5px solid #F7BC00;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
