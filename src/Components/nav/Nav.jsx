@@ -6,7 +6,8 @@ const Nav = () => {
     <nav>
       <div className="nav bg-white">
         <div class="mx-auto px-5 flex items-center justify-between container mx-auto ">
-            <img className="w-50 h-50" src={Logo} alt="logo" />
+          <div className="relative pb-2/3">           
+            <img className="h-20 w-full object-cover" id="logo" src={Logo} alt="logo" /></div> 
           <ul className="flex items-center gap-6">
             <li>
               <a className="hover:text-green-600 transition-colors transition ease-in-out delay-100" href="#search">

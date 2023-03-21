@@ -21,6 +21,10 @@ section {
   height: 100vh;
 }
 
+#logo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .App {
   text-align: center;
 }
