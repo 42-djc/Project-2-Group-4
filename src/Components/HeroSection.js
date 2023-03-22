@@ -9,7 +9,7 @@ const HeroSection = () => {
       <h2 className="text-4xl font-bold mb-4" style={{ color: "#147866" }}>
         have to be hard
         </h2>
-        <h3 className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum mauris vel augue scelerisque, nec hendrerit ipsum gravida. Aliquam quis sapien quam. Curabitur auctor tristique justo, ut sodales nulla laoreet vitae.</h3>
+        <h3 className="text-white">Welcome to RapidRecipes, where food prep is made easy. We believe that everyone should have access to quick, delicious meals that can be prepared in a flash. Whether you're a busy parent, a college student on the go, or just looking for a better way to eat, RapidRecipes is here to help. With our collection of simple and tasty recipes, meal prep has never been easier. So join us today and see how we can make your life in the kitchen a breeze!</h3>
       </div>
     </div>
   );
