@@ -14,7 +14,7 @@ const SavedRecipes = () => {
       {savedRecipes.length > 0 ? (
         <div className='w-10/12'>
           {savedRecipes.map((recipe, index) => (
-            <div className='flex flex-col items-center border-4 rounded-lg border-green-300 mt-4 pr-4 pl-4 w-full h-96 shadow-xl' key={index}>
+            <div className='flex flex-col items-center border-4 rounded-lg border-green-300 mt-4 pr-4 pl-4 w-full h-72 shadow-xl' key={index}>
               <h3 className='mt-1 mb-1 text-gray-200 text-center'>{recipe.title}</h3>
               <img className='w-32 h-32 border-2 border-green-300 rounded-xl shadow-md' src={recipe.image} alt={recipe.title} />
               <a href={recipe.url} target="_blank" rel="noopener noreferrer" className='mt-2 w-40 rounded-md text-center font-semibold shadow-md transition-colors bg-gradient-to-r from-green-300 to-green-600 hover:from-teal-800 hover:to-teal-400 hover-pulse'>

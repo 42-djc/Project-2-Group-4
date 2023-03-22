@@ -14,7 +14,7 @@ const App = () => {
       <div className="fixed top-50 right-0">
         <SideBar />
       </div>
-      <section>
+      <section className="grid grid-cols-1 grid-rows-1 m-4 h-[28rem] justify-items-center">
         <RecipeSearch />
       </section>
     </body>
