@@ -19,6 +19,11 @@ html {
 section {
   margin-top: 7rem;
   height: 100vh;
+
+}
+
+button.signin {
+  background-color: rgb(20, 120, 102);
 }
 
 .App {

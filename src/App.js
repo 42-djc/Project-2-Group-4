@@ -4,6 +4,7 @@ import Nav from './components/nav/Nav';
 import HeroSection from './components/HeroSection';
 import RecipeSearch from './components/RecipeSearch';
 import SideBar from './components/SideBar'
+import Form from './components/form/form'
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
       </div>
       <section>
         <RecipeSearch />
+      </section>
+      <section>
+        <Form/>
       </section>
     </body>
   );
