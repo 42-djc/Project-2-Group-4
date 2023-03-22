@@ -1,13 +1,14 @@
 import React from "react";
+import '.././nav/nav.css';
 import Logo from "../../assets/images/rapidrecipes.png";
 
 const Nav = () => {
   return (
     <nav>
-      <div className="nav bg-white">
+      <div className="bg-white">
         <div class="mx-auto px-5 flex items-center justify-between container mx-auto ">
-          <div className="relative bg-red-500 pb-2/3">
-            <img className="h-26 w-full object-cover" src={Logo} alt="logo" />
+          <div className="relative pb-2/3">
+            <img className="h-24 w-full object-cover" src={Logo} alt="logo" />
             </div>
           <ul className="flex items-center gap-6">
             <li>
