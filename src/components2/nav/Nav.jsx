@@ -21,14 +21,14 @@ function Dropdown() {
               <div className="hidden md:block">
                 <div className="mx-20 flex md-flex items-center space-x-10">
                   <a
-                    href="#"
+                    href="#search-section"
                     className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
                   >
                     Recipe Search
                   </a>
 
                   <a
-                    href="#"
+                    href="#contact-us"
                     className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
                   >
                     Contact Us

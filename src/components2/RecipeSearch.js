@@ -32,7 +32,7 @@ const RecipeSearch = () => {
   };
 
   return (
-    <section   className='grid grid-rows-2 grid-cols-2 gap-4'>
+    <section   className='grid grid-rows-2 grid-cols-2 gap-4' id="search-section">
       {/* Display a form for entering search query and health requirement */}
       <form onSubmit={handleSubmit}>
         <label>
