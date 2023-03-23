@@ -22,14 +22,14 @@ function Dropdown() {
                 <div className="mx-20 flex md-flex items-center space-x-10">
                   <a
                     href="#"
-                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
                   >
                     Recipe Search
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
                   >
                     Contact Us
                   </a>
@@ -123,11 +123,11 @@ function Dropdown() {
       </nav>
 
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div>
           {/* <!-- Replace with your content --> */}
-          <div className="px-4 py-6 sm:px-0">
+
             <div className="rounded-lg h-96"></div>
-          </div>
+
           {/* <!-- /End replace --> */}
         </div>
       </main>
