@@ -10,6 +10,8 @@ const App = () => {
   return (
     <body>
       <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato:400i" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Playfair+Display" rel="stylesheet"></link>
       <Nav/>
       <HeroSection />
       <div className="fixed top-50 right-0">
