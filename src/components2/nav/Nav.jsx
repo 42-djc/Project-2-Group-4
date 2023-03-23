@@ -22,14 +22,14 @@ function Dropdown() {
                 <div className="mx-20 flex md-flex items-center space-x-10">
                   <a
                     href="#search-section"
-                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
+                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-lg font-large text-center"
                   >
                     Recipe Search
                   </a>
 
                   <a
                     href="#contact-us"
-                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-sm font-medium text-center"
+                    className="text-gray-800 hover:bg-gray-300 hover:text-green-800 px-3 py-2 rounded-md text-lg font-large text-center"
                   >
                     Contact Us
                   </a>
@@ -104,14 +104,14 @@ function Dropdown() {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a
-                  href="#"
+                  href="#search-section"
                   className="text-gray-800 hover:bg-gray-100 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Recipe Search
                 </a>
 
                 <a
-                  href="#"
+                  href="#contact-us"
                   className="text-gray-800 hover:bg-gray-100 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact Us

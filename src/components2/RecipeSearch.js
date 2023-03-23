@@ -66,7 +66,7 @@ import { GrLinkNext } from 'react-icons/gr'
     };
 
     return (
-      <div className='h-auto flex justify-center'> 
+      <div className='h-auto flex justify-center' id="search-section"> 
       <section className='m-0 w-full h-auto'>
         <form onSubmit={handleSubmit} className="flex justify-center h-auto pb-8 gap-4 bg-white rounded-lg">
           <label className="font block text-gray-800 relative ">
