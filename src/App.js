@@ -4,6 +4,8 @@ import Nav from './components2/nav/Nav';
 import HeroSection from './components2/HeroSection';
 import RecipeSearch from './components2/RecipeSearch';
 import SideBar from './components2/SideBar';
+import Footer from './components2/footer/Footer';
+
 
 const App = () => {
   return (
@@ -21,7 +23,9 @@ const App = () => {
         <Form/>
       </section>
       <div></div>
-
+      <footer>
+        <Footer/>
+      </footer>
     </body>
   );
 };
