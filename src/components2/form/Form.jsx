@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
   return (
 <div className="static"> 
- <div className="static mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8" id="form">
+ <div className="static mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8" id="form contact-us">
    <div className="mx-auto max-w-lg text-center">
      <h1 className="text-2xl font-bold sm:text-3xl">Contact Us!</h1>
    </div>
