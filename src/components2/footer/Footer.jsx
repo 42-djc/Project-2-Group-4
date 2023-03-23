@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Frameworks
+              Andrew Styles
             </h6>
             <p className="mb-4">
               <a href="#!" className="text-neutral-600 dark:text-neutral-200">
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-            Credits
+            Chloe Hill
             </h6>
             <p className="mb-4 flex items-center justify-center md:justify-start">
             <svg
