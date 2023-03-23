@@ -1,15 +1,15 @@
 const saveRecipe = (recipe) => {
   const savedRecipes = getSavedRecipes();
 
-  if (savedRecipes.some((savedRecipe) => savedRecipe.uri === recipe.url)) {
+  if (savedRecipes.some((savedRecipe) => savedRecipe.url === recipe.url)) {
     alert("This recipe is already saved.");
     return;
   }
 
   savedRecipes.push(recipe);
   localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
-  alert("Recipe saved!");
 };
+
 
 const getSavedRecipes = () => {
   const savedRecipesJSON = localStorage.getItem("savedRecipes");

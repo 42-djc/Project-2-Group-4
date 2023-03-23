@@ -1,10 +1,9 @@
 import React from 'react';
 import '../src/App.css'
-import Nav from './components/nav/Nav';
-import HeroSection from './components/HeroSection';
-import RecipeSearch from './components/RecipeSearch';
-import SideBar from './components/SideBar'
-import Form from './components/form/form'
+import Nav from './components2/nav/Nav';
+import HeroSection from './components2/HeroSection';
+import RecipeSearch from './components2/RecipeSearch';
+import SideBar from './components2/SideBar';
 
 const App = () => {
   return (
@@ -15,12 +14,14 @@ const App = () => {
       <div className="fixed top-50 right-0">
         <SideBar />
       </div>
-      <section>
+      <section className="grid grid-cols-1 grid-rows-1 m-4 h-[28rem] justify-items-center">
         <RecipeSearch />
       </section>
       <section>
         <Form/>
       </section>
+      <div></div>
+
     </body>
   );
 };
