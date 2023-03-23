@@ -4,7 +4,9 @@ import Nav from './components2/nav/Nav';
 import HeroSection from './components2/HeroSection';
 import RecipeSearch from './components2/RecipeSearch';
 import SideBar from './components2/SideBar';
+import Form from './components2/form/Form'
 import Footer from './components2/footer/Footer';
+
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
       </div>
       <section className="grid grid-cols-1 grid-rows-1 m-4 h-[30rem] justify-items-center">
         <RecipeSearch />
+      </section>
+      <section>
+        <Form/>
       </section>
       <div></div>
       <footer>
