@@ -4,6 +4,7 @@ import Nav from './components2/nav/Nav';
 import HeroSection from './components2/HeroSection';
 import RecipeSearch from './components2/RecipeSearch';
 import SideBar from './components2/SideBar';
+import Form from './components2/form/Form'
 import Footer from './components2/footer/Footer';
 
 
