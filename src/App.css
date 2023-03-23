@@ -16,10 +16,20 @@ html {
   scroll-behavior: smooth;
 }
 
+
 section {
-  margin-top: 7rem;
-  height: 100vh;
-  Font-Family: 'Catamaran', Sans-Serif;
+  margin-top: 1rem;
+  height: 50vh;
+
+}
+
+#form {
+  margin-top: 1rem;
+  height: 100%;
+}
+
+button.signin {
+  background-color: rgb(20, 120, 102);
 }
 
 a, h3, span, p, button {
