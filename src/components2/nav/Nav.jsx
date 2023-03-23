@@ -8,9 +8,9 @@ function Dropdown() {
   return (
     <div>
       <nav className="bg-white-800">
-        <div className="max-w-7xl mr-auto px-4 sm:px-6 lg:px-8">
-          <div className="my-5 mx-20 flex md-flex justify-end space-x-10 h-16 whitespace-nowrap">
-            <div className="mx-auto flex justify-between container">
+        <div className="max-w-8xl mr-auto px-4 sm:px-6 lg:px-8">
+          <div className="my-5 mx-23 flex md-flex justify-end space-x-13 h-16 whitespace-nowrap">
+            <div className="mx-auto flex justify-between items-center container">
               <div className="flex-shrink-0">
                 <img
                   className="h-16 w-full object-cover hidden md:block"
@@ -36,10 +36,10 @@ function Dropdown() {
                 </div>
               </div>
             </div>
-            <div className="flex md:hidden">  
-            <div className="flex-shrink-0">
+            <div className="flex md:hidden grid grid-cols-2 grid-rows-1 gap-4">  
+            <div className="inline-flex items-end justify-center p-2 rounded-md ">
                   <img
-                    className="block h-10 w-10"
+                    className=" h-10 w-20"
                     src={Logo1}
                     alt="Workflow"
                   />
@@ -93,10 +93,10 @@ function Dropdown() {
 
         <Transition
           show={isOpen}
-          enter="transition ease-out duration-100 transform"
+          enter="transition ease-out duration-50 transform"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-75 transform"
+          leave="transition ease-in duration-50 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
