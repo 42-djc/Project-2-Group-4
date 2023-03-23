@@ -29,7 +29,23 @@ section {
 
 button.signin {
   background-color: rgb(20, 120, 102);
+  margin-top: 7rem;
+  height: 100vh;
+  Font-Family: 'Catamaran', Sans-Serif;
+
 }
+
+a, h3, span, p, button {
+  Font-Family: 'Catamaran', Sans-Serif;
+
+
+}
+
+h1, h2, h4, h5, h6 {
+  Font-Family: 'PT Sans', Sans-Serif;
+}
+
+
 
 .App {
   text-align: center;
@@ -71,7 +87,8 @@ button.signin {
 }
 
 @keyframes icon-spin {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   25% {
@@ -87,7 +104,8 @@ button.signin {
 }
 
 @keyframes save-spin {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   25% {
@@ -102,9 +120,9 @@ button.signin {
   animation: save-spin 1s linear infinite;
 }
 
-
 @keyframes button-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
