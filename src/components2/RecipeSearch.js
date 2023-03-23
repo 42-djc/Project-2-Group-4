@@ -1,8 +1,9 @@
-  import React, { useState } from 'react';
-  import { saveRecipe } from './storage';
-  import '../../src/App.css'
-  import { RiStarSmileFill } from 'react-icons/ri';
-
+import React, { useState } from 'react';
+import { saveRecipe } from './storage';
+import '../../src/App.css'
+import { RiStarSmileFill } from 'react-icons/ri';
+import { GrLinkPrevious } from 'react-icons/gr'
+import { GrLinkNext } from 'react-icons/gr'
 
 
   const RecipeSearch = () => {
@@ -10,35 +11,63 @@
     const [query, setQuery] = useState('');
     const [health, setHealth] = useState('');
     const [recipes, setRecipes] = useState([]);
-
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
     const handleSubmit = async (event) => {
       event.preventDefault();
-
-      // Fetch recipe data from the Edamam API using the search query and health requirement
+      setCurrentIndex(0); // Reset the currentIndex to 0 when performing a new search
+    
       const response = await fetch(
         `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=b51aecbd&app_key=bfcace0544181d8e13a6405daebb1431${health ? `&health=${health}` : ''}`
       );
-
-      // Parse the JSON response into an object and extract the first 5 recipe hits
+    
       const data = await response.json();
-      const recipesData = data.hits.slice(0, 5).map((hit) => ({
+      const recipesData = data.hits.map((hit) => ({
         title: hit.recipe.label,
         image: hit.recipe.image,
         ingredients: hit.recipe.ingredientLines,
         time: hit.recipe.totalTime,
         url: hit.recipe.url,
       }));
-      console.log(data)
+    
+        setRecipes(recipesData);
+        setHealth("");
+        setQuery("");
+    };
+  
+    const fetchMoreRecipes = async () => {
+      // Fetch recipes starting from the currentIndex
+      const response = await fetch(
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=b51aecbd&app_key=bfcace0544181d8e13a6405daebb1431${health ? `&health=${health}` : ''}&from=${currentIndex}`
+      );
+    
+      const data = await response.json();
+      const recipesData = data.hits.map((hit) => ({
+        title: hit.recipe.label,
+        image: hit.recipe.image,
+        ingredients: hit.recipe.ingredientLines,
+        time: hit.recipe.totalTime,
+        url: hit.recipe.url,
+      }));
+    
       // Update the recipes state variable with the extracted recipe data
-      setRecipes(recipesData);
-      setHealth("");
-      setQuery("");
-
+      setRecipes((prevRecipes) => [...prevRecipes, ...recipesData]);
+    };
+    
+    const nextFive = () => {
+      setCurrentIndex(currentIndex + 5);
+      fetchMoreRecipes();
+    };
+    
+    const prevFive = () => {
+      if (currentIndex - 5 >= 0) {
+        setCurrentIndex(currentIndex - 5);
+      }
     };
 
     return (
-      <div className='container h-auto w-full flex justify-center'> 
-      <section className='m-0 h-auto'>
+      <div className='h-auto flex justify-center'> 
+      <section className='m-0 w-full h-auto'>
         <form onSubmit={handleSubmit} className="flex justify-center h-auto pb-8 gap-4 bg-white rounded-lg">
           <label className="font block text-gray-800 relative">
             Enter recipe keywords such as "chicken", "dessert", etc.
@@ -96,10 +125,19 @@
 
         {/* If search results exist, display the recipe information */}
         {recipes.length > 0 && (
-          <div className="grid grid-cols-5 gap-6">
-            {recipes.map((recipe, index) => (
+          <div className="grid grid-cols-7 gap-6">
+            {recipes.length > 0 && (
+              <div className='flex items-center justify-end'>
+                {currentIndex === 0 ? null : (
+                  <button className='flex items-center justify-center h-14 w-16 text-2xl text-center rounded-md focus:outline-none ' onClick={prevFive}>
+                    <GrLinkPrevious className='align-middle justify-center'/>
+                  </button>
+                )}
+              </div>
+            )}
+            {recipes.slice(currentIndex, currentIndex + 5).map((recipe, index) => (
               <div className='flex justify-center'>
-              <div key={index} className="flex flex-col w-64 h-fill border-4 border-yellow-500 rounded-lg p-2 content-center items-center text-center shadow-lg">
+              <div key={index} className="flex flex-col w-64 h-fill bg-yellow-200 bg-opacity-50 border-4 border-yellow-500 rounded-lg p-2 content-center items-center text-center shadow-lg">
                 <h3 className="text-gray-800 h-12 font-bold overflow-auto custom-scrollbar title-shadow">{recipe.title}</h3>
                 <img src={recipe.image} alt={recipe.title} className="mt-2 mb-2 h-24 w-24 border-2 rounded-md border-yellow-500" />
                 <p className="mt-2 mb-2 text-gray-800 font-bold title-shadow">Cooking time: {recipe.time} minutes</p>
@@ -118,6 +156,15 @@
               </div>
               </div>
               ))}
+              {recipes.length > 0 && (
+              <div className='flex items-center justify-start'>
+                {currentIndex === 15 ? null : (
+                  <button className='flex items-center justify-center h-14 w-16 text-2xl text-center rounded-md focus:outline-none' onClick={nextFive}>
+                    <GrLinkNext className='align-middle justify-center'/>
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         )}
       </section>
